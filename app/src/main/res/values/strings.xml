@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">27-ClockFlipper</string>
+    <string name="menu_settings">Settings</string>
+
+    <color name="bisque">#ffe4c4</color>
+    <color name="snow">#cdc9c9</color>
+    <color name="honeydew">#f0fff0</color>
+
+</resources>

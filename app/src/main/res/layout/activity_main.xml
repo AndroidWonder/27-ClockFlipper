@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout android:id="@+id/topLayout"
+        android:layout_width="match_parent" android:layout_height="48dp"
+        android:layout_alignParentTop="true">
+
+        <View android:layout_width="match_parent" android:layout_height="2dp"
+            android:layout_alignParentBottom="true" android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp" android:background="?android:attr/dividerVertical" />
+
+
+        <Button android:id="@+id/previousView" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Previous" android:layout_alignParentBottom="true" />
+
+        <View
+            android:id="@+id/viewDivider1"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/previousView"
+            android:background="?android:attr/dividerVertical" />
+
+        <Button android:id="@+id/nextView" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Next" android:layout_alignParentBottom="true" />
+
+        <View
+            android:id="@+id/viewDivider2"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@id/nextView"
+            android:background="?android:attr/dividerVertical" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton"
+            android:textOff="Start Flipper"
+            android:textOn="Stop Flipper"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/viewDivider1"
+            android:layout_toLeftOf="@+id/viewDivider2"/>
+
+
+
+    </RelativeLayout>
+
+    <ViewFlipper
+        android:id="@+id/myViewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topLayout">
+
+        <AnalogClock
+            android:id="@+id/analogClock1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bisque" />
+
+        <AnalogClock
+            android:id="@+id/analogClock2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/honeydew" />
+
+        <AnalogClock
+            android:id="@+id/analogClock3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/snow" />
+
+    </ViewFlipper>
+
+</RelativeLayout>
